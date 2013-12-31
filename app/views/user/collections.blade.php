@@ -3,7 +3,9 @@
 @section('content')
 <header class="collection">
 	<div class="title">
+		<a class="light" href="{{ URL('@'.$user->username.'/profile') }}">
 		{{ "@".$user->username }}
+		</a>
 	</div>
 	<div class="white left"></div>
 	<div class="white right"></div>
@@ -11,6 +13,13 @@
 <section>
 	<article>
 		<h1>Collections</h1>
+		@if($user->isHim)
+		<div class="input">
+			<a href="{{ URL('@'.$user->username.'/new-collection') }}">
+				<button>New collection</button>
+			</a>
+		</div>
+		@endif
 		@if(count($user->collections) > 0)
 			@foreach($user->collections as $collection)
 			<a href="{{ URL('@'.$user->username.'/'.$collection->id) }}">
@@ -25,14 +34,9 @@
 				</div>
 			</a>
 			@endforeach
-
-			@if($user->isHim)
-			<a href="{{ URL('@'.$user->username.'/new-collection') }}">Click here to create a collection.</a>
-			@endif
 		@else
 			@if($user->isHim)
 			<p>You don't have a collection.</p>
-			<a href="{{ URL('@'.$user->username.'/new-collection') }}">Click here to create a collection.</a>
 			@else
 			<p>This user doesn't have any collection.</p>
 			@endif

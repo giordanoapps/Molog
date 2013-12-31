@@ -1,17 +1,22 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
+@import url(http://fonts.googleapis.com/css?family=Lora);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+
+.lora {
+  font-family: 'Lora', 'Book Antiqua', Palatino, serif;
+}
+
+.merriweather {
+  font-family: 'Merriweather', 'Book Antiqua', Palatino, serif;
+}
+
+.pt_serif {
+  font-family: 'PT Serif', 'Book Antiqua', Palatino, serif;
+}
 
 .open_sans {
-	font-family: 'Open Sans', sans-serif !important;
-}
-
-.open_sans_condensed {
-	font-family: 'Open Sans Condensed', sans-serif !important;
-}
-
-.lato {
-	font-family: 'Lato', sans-serif !important;
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
 .slider {

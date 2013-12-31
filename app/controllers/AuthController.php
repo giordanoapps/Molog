@@ -64,6 +64,7 @@ class AuthController extends BaseController {
 			$picture = explode('_normal',$twitter_data->profile_image_url);
 
 			$user->picture = $picture[0].$picture[1];
+			$user->name = $twitter_data->name;
 
 			$user->save();
 		}

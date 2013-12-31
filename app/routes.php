@@ -15,9 +15,15 @@ Route::get('/', 'HomeController@listPosts');
 Route::get('sign-in', 'HomeController@index');
 
 Route::get('@{username}', 'UserController@userCollections');
-Route::get('@{username}/profile', 'UserController@userProfile');
+
+Route::get('@{username}/profile', 'UserController@getUserProfile');
+Route::post('@{username}/profile', 'UserController@postUserProfile');
+
 Route::get('@{username}/new-collection', 'UserController@getNewCollection');
 Route::post('@{username}/new-collection', 'UserController@postNewCollection');
+
+Route::get('@{username}/{collection}/new-post', 'UserController@getNewPost');
+Route::post('@{username}/{collection}/new-post', 'UserController@postNewPost');
 
 Route::get('@{username}/{collection}', 'UserController@userCollection');
 Route::get('@{username}/{collection}/{post}', 'UserController@userPost');

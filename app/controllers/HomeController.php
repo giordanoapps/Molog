@@ -25,7 +25,7 @@ class HomeController extends BaseController {
 
 	public function listPosts()
 	{
-		$posts = Post::take(10)->get();
+		$posts = Post::take(10)->orderBy('updated_at', 'DESC')->get();
 
 		$user = null;
 
@@ -33,7 +33,25 @@ class HomeController extends BaseController {
 		{
 			$user = User::find(Session::get('user'));
 			
-			$user->twitter_data = Twitter::usersShow($user->twitter->user_id, $user->username);
+			$user->logged = true;
+
+			try {
+			
+				$user->twitter_data = Twitter::usersShow($user->twitter->user_id, $user->username);
+			
+			} catch(Exception $e) {
+				
+				switch($e->getCode())
+				{
+					case 0:
+						return View::make('home.list')
+													->with('posts', $posts)
+													->with('user', $user)
+													->with('message','Couldn\'t make a connection.');
+						break;
+				}
+
+			}
 		}
 
 		return View::make('home.list')

@@ -17,7 +17,7 @@ class CreateSettingsTable extends Migration {
 
 			$table->integer('user_id');
 			$table->string('font_face');
-			$table->integer('font_size');
+			$table->float('font_size');
 			$table->integer('font_weight');
 		});
 	}

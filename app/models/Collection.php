@@ -18,6 +18,7 @@ class Collection extends Eloquent {
 
   public function posts()
 	{
-		return $this->hasMany('Post');
+		return $this->hasMany('Post')->orderBy('updated_at','DESC');
 	}
+
 }

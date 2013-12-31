@@ -7,19 +7,52 @@
 		<link rel="stylesheet" href="{{ asset('css/icons.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/menu.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/molog.css') }}"/>
+		@if($user != null)
+			@if($user->logged)
+				@if($user->settings != null)
+				<style>
+				.postContent p {
+					font-size: {{ $user->settings->font_size }}em;
+					font-family: '{{ $user->settings->font_face }}', 'Book Antiqua', Palatino, serif;
+					font-weight: {{ $user->settings->font_weight }};
+					text-align: {{ $user->settings->text_align }};
+					color: rgba(0,0,0,{{ $user->settings->font_color }});
+				}
+				.postContent h1,
+				.postContent h2,
+				.postContent h3,
+				.postContent h4,
+				.postContent h5 {
+					font-family: '{{ $user->settings->font_face }}', 'Book Antiqua', Palatino, serif;
+					font-weight: {{ $user->settings->font_weight }};
+					text-align: {{ $user->settings->text_align }};
+					color: rgba(0,0,0,{{ $user->settings->font_color }});
+				}
+				</style>
+				@endif
+			@endif
+		@endif
 	</head>
 	<body>	
 		<nav id="bt-menu" class="bt-menu">
 			<a href="#" class="bt-menu-trigger"><span>Menu</span></a>
 			<ul id="fst-menu" class="closed">
 				@if($user != null)
-					@section('left-menu')
-						<li><a href="{{ URL('/') }}">Recent</a></li>
-						<li><a href="{{ URL('@'.$user->username.'/profile') }}">My profile</a></li>
-						<li><a href="{{ URL('@'.$user->username) }}">My collections</a></li>
-						<li><a href="#">Contact</a></li>
-						<li><a href="{{ URL('logout') }}">Sign out</a></li>
-					@show
+					@if($user->logged)
+						@section('left-menu')
+							<li><a href="{{ URL('/') }}">Recent</a></li>
+							<li><a href="{{ URL('@'.$user->username.'/profile') }}">My profile</a></li>
+							<li><a href="{{ URL('@'.$user->username) }}">My collections</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="{{ URL('logout') }}">Sign out</a></li>
+						@show
+					@else
+						@section('left-menu')
+							<li><a href="{{ URL('/') }}">Recent</a></li>
+							<li><a href="{{ URL('sign-in') }}">Sign in</a></li>
+							<li><a href="#">Contact</a></li>
+						@show
+					@endif
 				@else
 					@section('left-menu')
 						<li><a href="{{ URL('/') }}">Recent</a></li>
@@ -37,6 +70,7 @@
 		</nav>
 		@yield('content')
 	</body>
+	<script src="{{ asset('js/markdown.js') }}"></script>
 	<script src="{{ asset('js/jquery.min.js') }}"></script>
 	<script src="{{ asset('js/simple-slider.min.js') }}"></script>
 	<script src="{{ asset('js/classie.js') }}"></script>

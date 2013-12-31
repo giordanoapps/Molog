@@ -9,6 +9,13 @@
 	<div class="white right"></div>
 </header>
 <section>
+	@if(isset($message))
+	<article>
+		<div class="message">
+			{{ $message }}
+		</div>
+	</article>
+	@endif
 	<article>
 		<ul class="list">
 			@foreach($posts as $post)

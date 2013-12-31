@@ -21,6 +21,11 @@ class User extends Eloquent {
 		return $this->hasMany('Collection');
 	}
 
+	public function posts()
+	{
+		return $this->hasMany('Post');
+	}
+
 	public function settings()
 	{
 		return $this->hasOne('Setting');

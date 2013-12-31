@@ -3,7 +3,9 @@
 @section('content')
 <header class="collection">
 	<div class="title">
-		{{ "@".$user->username }} / {{ $collection->title }}
+		<a class="light" href="{{ URL('@'.$user->username) }}">
+		{{ "@".$user->username }}
+		</a> / {{ $collection->title }}
 	</div>
 	<div class="white left"></div>
 	<div class="white right"></div>
@@ -11,6 +13,13 @@
 <section>
 	<article>
 		<h1>Posts</h1>
+		@if($user->isHim)
+		<div class="input">
+			<a href="{{ URL('@'.$user->username.'/'.$collection->id.'/new-post') }}">
+				<button>New post</button>
+			</a>
+		</div>
+		@endif
 		@if(count($collection->posts) > 0)
 			@foreach($collection->posts as $post)
 			<a href="{{ URL('@'.$user->username.'/'.$collection->id.'/'.$post->id) }}">
@@ -24,10 +33,6 @@
 				</div>
 			</a>
 			@endforeach
-
-			@if($user->isHim)
-			<a href="{{ URL('@'.$user->username.'/'.$collection->id.'/new-post') }}">Click here to create a new post.</a>
-			@endif
 		@else
 			@if($user->isHim)
 			<p>You don't have a post.</p>

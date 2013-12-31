@@ -10,6 +10,23 @@ Template.prototype = {
 
 		this.scrollEvent();
 		this.settings();
+
+		$('.message').delay(2000).slideUp(1000);
+
+		this.post();
+	},
+
+	post : function()
+	{
+		var $from	  = $('#post-preview');
+		var $target = $('textarea[name="text"]');
+
+		$('#post-area').on('keyup', function()
+		{
+			$target.html($from.html());
+
+			console.log($from.html());
+		});
 	},
 
 	scrollEvent : function()
@@ -52,14 +69,17 @@ Template.prototype = {
 
 		$('select[name="font_face"]').on('change', function()
 		{
-			var font = $(this).val();
-
-			$('p').attr('class',font);
+			$('p').css({'font-family' : $(this).val()+', sans-serif' });
 		});
 
 		$('input[name="font_weight"]').on('change', function()
 		{
 			$('p').css({'font-weight' : $(this).val() });
+		});
+
+		$('input[name="font_color"]').on('change', function()
+		{
+			$('p').css({'color' : 'rgba(0,0,0,'+$(this).val()+')' });
 		});
 
 		$('input[name="font_size"]').on('change', function()
