@@ -29,9 +29,12 @@
 							</a>
 						</h1>
 						<p>
-							<a href="{{ URL('@'.$post->user->username) }}">
+							<a href="{{ URL('@'.$post->user->username.'/profile') }}">
 								{{ "@".$post->user->username }}
-							</a>
+							</a> · 
+							<a href="{{ URL('@'.$post->user->username.'/'.$post->collection->id) }}">
+								{{ $post->collection->title }}
+							</a> · {{ $post->minutes }} min read
 						</p>
 					</div>
 				</div>
