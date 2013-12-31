@@ -24,7 +24,7 @@
 				.postContent h4,
 				.postContent h5 {
 					font-family: '{{ $user->settings->font_face }}', 'Book Antiqua', Palatino, serif;
-					font-weight: {{ $user->settings->font_weight }};
+					font-weight: bolder;
 					text-align: {{ $user->settings->text_align }};
 					color: rgba(0,0,0,{{ $user->settings->font_color }});
 				}

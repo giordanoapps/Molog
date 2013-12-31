@@ -240,6 +240,14 @@ ul {
 					box-shadow: 0px 0px 10px rgba(50,50,50,.2);
 }
 
+code {
+	margin: 0 2px;
+	padding: 0px 5px;
+	border: 1px solid #ddd;
+	background-color: #f8f8f8;
+	border-radius: 3px;
+}
+
 .list li:last-child:after {
 	display: none;
 }
@@ -636,4 +644,9 @@ div.collection:hover {
 	font-family: 'Lora', 'Book Antiqua', Palatino, serif;
 	letter-spacing: .01rem;
 	line-height: 1.5;
+}
+
+.postContent h1,
+.postContent h2 {
+	border-bottom: 1px solid #ccc;
 }
