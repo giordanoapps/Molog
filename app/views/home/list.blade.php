@@ -23,11 +23,11 @@
 				<div class="profile">
 					<img src="{{ $post->user->picture }}"/>
 					<div class="info">
-						<h1>
+						<h3>
 							<a href="{{ URL('@'.$post->user->username.'/'.$post->collection->id.'/'.$post->id) }}">
 								{{ $post->title }}
 							</a>
-						</h1>
+						</h3>
 						<p>
 							<a href="{{ URL('@'.$post->user->username.'/profile') }}">
 								{{ "@".$post->user->username }}

@@ -23,6 +23,23 @@ class HomeController extends BaseController {
 		}
 	}
 
+	public function contact()
+	{
+		if(Session::has('user'))
+		{
+			$user = User::find(Session::get('user'));
+
+			$user->logged = true;
+		}
+		else
+		{
+			$user = null;
+		}
+
+		return View::make('home.contact')
+									->with('user', $user);
+	}
+
 	public function listPosts()
 	{
 		$posts = Post::take(10)->orderBy('updated_at', 'DESC')->get();

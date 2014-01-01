@@ -1,6 +1,9 @@
 @extends('layouts.default')
 
 @section('content')
+<div class="settingsTrigger">
+Aa
+</div>
 <header>
 	<div class="title">
 		<div class="collection-title">

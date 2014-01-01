@@ -1,19 +1,30 @@
 function Template(){
-
+	this.settings;
 };
 
 Template.prototype = {
 	
 	start : function()
 	{
-		console.log('Hello World!');
-
 		this.scrollEvent();
 		this.settings();
 
 		$('.message').delay(2000).slideUp(1000);
 
 		this.post();
+		this.userSettings();
+	},
+
+	userSettings : function()
+	{
+		if($.cookie('molog-settings') == undefined)
+		{
+			$.cookie('molog-settings', JSON.stringify(settings));
+		}
+		else
+		{
+			this.settings = JSON.parse($.cookie('molog-settings'));
+		}
 	},
 
 	post : function()

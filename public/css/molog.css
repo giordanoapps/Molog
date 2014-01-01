@@ -7,18 +7,30 @@ html, body {
 	color: #222;
 }
 
+#topBar {
+	display: none;
+}
+
 h1 {
 	font-size: 2em;
-	margin: 0 0 30px 0;
+	margin: 10px 0px;
+	border-bottom: 1px solid #ddd;
+	display: inline-block;
+	clear: both;
+}
+
+form {
+	margin: 20px 0px;
 }
 
 h3 {
-	margin: 0;
+	margin: 5px 0px;
+	font-size: 1.5em;
 }
 
 p {
 	text-align: justify;
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 300;
 }
 
@@ -56,8 +68,18 @@ header.list {
 	background-image: url('../img/library.jpg');
 }
 
+header.contact {
+	height: 40%;
+	background-image: url('../img/library.jpg');
+}
+
 footer {
 	height: 40%;
+}
+
+footer.contact {
+	height: 60%;
+	background-image: url('../img/library.jpg');
 }
 
 header:before, header:after,
@@ -194,7 +216,7 @@ footer:hover .see-collection {
 	top: 0px;
 	width: 0px;
 	height: 2px;
-	background-color: red;
+	background-color: rgb(255, 143, 0);
 	-webkit-transition: width .25s;
 	transition: width .25s;
 }
@@ -271,22 +293,16 @@ code {
 
 .profile .info {
 	position: absolute;
-	width: 100%;
 	height: 100%;
 	top: 0px;
 	display: inherit;
 	padding: 10px 20px;
 }
 
-.profile .info h1 {
-	font-size: 1.6em !important;
-}
-
 .profile .info p {
 	font-size: 1em !important;
 }
 
-.profile .info h1,
 .profile .info p {
 	margin: 0;
 }
@@ -305,8 +321,8 @@ code {
 
 .full-profile h1 {
 	font-size: 2.5em;
-	margin: 0;
-	padding: 10px 0px 0px 160px;
+	margin: 10px 0px 0px 160px;
+	border: 0px;
 }
 
 .full-profile h3 {
@@ -353,6 +369,12 @@ a:hover {
 	border-bottom: 1px solid rgba(41, 128, 185, .7);
 	-webkit-transition: color .25s, border .25s;
 	transition: color .25s, border .25s;
+}
+
+a.bt-menu-trigger:hover {
+	border-bottom: 1px solid rgba(255, 255, 255, .4);
+	-webkit-transition: border .25s;
+	transition: border .25s;
 }
 
 a.light {
@@ -633,6 +655,30 @@ div.collection:hover {
 	width: 100%;
 }
 
+.postContent h1 {
+	font-size: 2em;
+}
+
+.postContent h2 {
+	font-size: 1.7em;
+}
+
+.postContent h3 {
+	font-size: 1.5em;
+}
+
+.postContent h4 {
+	font-size: 1.3em;
+}
+
+.postContent h5 {
+	font-size: 1.2em;
+}
+
+.postContent h6 {
+	font-size: 1.1em;
+}
+
 .postContent h1,
 .postContent h2,
 .postContent h3,
@@ -649,4 +695,26 @@ div.collection:hover {
 .postContent h1,
 .postContent h2 {
 	border-bottom: 1px solid #ccc;
+}
+
+.settingsTrigger {
+	font-family: 'Lora', 'Book Antiqua', Palatino, serif;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: 5;
+	color: #f5f5f5;
+	font-weight: bolder;
+	font-size: 2em;
+	margin: 15px;
+	text-shadow: 0px 0px 2px #999;
+	cursor: pointer;
+	-webkit-transition: text-shadow .5s;
+	transition: text-shadow .5s;
+}
+
+.settingsTrigger:hover {
+	text-shadow: 0px 0px 2px #000;
+	-webkit-transition: text-shadow .5s;
+	transition: text-shadow .5s;
 }

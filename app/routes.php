@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@listPosts');
 Route::get('sign-in', 'HomeController@index');
+Route::get('contact', 'HomeController@contact');
 
 Route::get('@{username}', 'UserController@userCollections');
 
