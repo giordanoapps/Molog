@@ -27,7 +27,7 @@
 					<div class="title">{{ $post->title }}</div>
 					<div class="data">
 						<div class="posts">
-							5 min read
+							{{ $post->minutes }} min read
 						</div>
 					</div>
 				</div>

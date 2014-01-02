@@ -11,3 +11,30 @@ Now you have all dependencies installed!
 
 ##Configuration
 The only needed configuration are the `database` and the `twitter API`.
+
+###The database
+To configure the database, simple change lines 57 to 60 on `app/config/database.php`. (OBS: we use mysql. It is possible to use postgresql either. Please visit http://laravel.com/).
+
+Now you need to execute the following commands (on the root directory):
+
+```bash
+php artisan migrate:install
+php artisan migrate
+```
+
+###Twitter API
+You need to setup your CONSUMER_KEY and CONSUMER_SECRET inside app/config/packages/philo/twitter/config.php.
+
+```bash
+<?php
+
+return array(
+    'CONSUMER_KEY'    => '<your-app-key>',
+    'CONSUMER_SECRET' => '<your-app-secret>'
+);
+```
+
+#Contact
+You can reach me at github, twitter (@mauriciogior) and facebook (/mauriciogior).
+
+Thanks!

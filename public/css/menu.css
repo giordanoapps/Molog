@@ -8,7 +8,7 @@
 
 .bt-menu {
 	position: fixed;
-	z-index: 3;
+	z-index: 4;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -50,6 +50,10 @@
 	cursor: pointer;
 }
 
+.bt-menu-trigger:hover {
+	border-bottom: 1px solid transparent;
+}
+
 .bt-menu-trigger span {
 	position: absolute;
 	top: 50%;
@@ -69,8 +73,19 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	-webkit-transition: background-color 0.3s;
-	transition: background-color 0.3s;
+	-webkit-transition: background-color 0.3s, box-shadow .25s;
+	transition: background-color 0.3s, box-shadow .25s;
+}
+
+.bt-menu-trigger:hover span,
+.bt-menu-trigger:hover span:before,
+.bt-menu-trigger:hover span:after {
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,.4);
+		 -moz-box-shadow: 0px 0px 4px rgba(0,0,0,.4);
+					box-shadow: 0px 0px 4px rgba(0,0,0,.4);
+
+	-webkit-transition: box-shadow .25s;
+	transition: box-shadow .25s;
 }
 
 .bt-menu-trigger span:before,
@@ -85,8 +100,8 @@
 					box-shadow: 0px 0px 2px rgba(0,0,0,.4);
 
 	content: '';
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s, box-shadow .25s;
+	transition: transform 0.3s, box-shadow .25s;
 }
 
 .bt-menu-trigger span:before {

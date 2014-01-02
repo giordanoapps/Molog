@@ -1,8 +1,16 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="settingsTrigger">
-Aa
+
+<div class="bt-settings-trigger">
+	<a href="#">
+		Aa
+	</a>
+</div>
+<div class="settings-menu">
+	<div class="settings-content">
+		OII
+	</div>
 </div>
 <header>
 	<div class="title">

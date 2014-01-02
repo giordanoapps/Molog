@@ -13,6 +13,30 @@ Template.prototype = {
 
 		this.post();
 		this.userSettings();
+		this.jsSettings();
+	},
+
+	jsSettings : function()
+	{
+		$('.bt-settings-trigger').on('click', function()
+		{
+			if($(this).hasClass('active'))
+			{
+				$(this).toggleClass('active');
+				$('body').stop().animate({'left':'0px'});
+				$('.settings-content').hide();
+				$('.settings-menu').stop().animate({'width':'0px'});
+			}
+			else
+			{
+				$(this).toggleClass('active');
+				$('body').stop().animate({'left':'-250px'});
+				$('.settings-menu').stop().animate({'width':'250px'}, function()
+				{
+					$('.settings-content').fadeIn(500);
+				});
+			}
+		});
 	},
 
 	userSettings : function()

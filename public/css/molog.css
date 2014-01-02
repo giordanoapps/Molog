@@ -7,6 +7,52 @@ html, body {
 	color: #222;
 }
 
+.bt-settings-trigger {
+	font-family: 'Lora', 'Book Antiqua', Palatino, serif;
+	z-index: 3;
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 15px;
+	font-size: 2em;
+	border: 0px !important;
+	cursor: pointer;
+}
+
+.bt-settings-trigger a {
+	border-bottom: 1px solid transparent;
+	color: #f5f5f5 !important;
+	font-weight: bold;
+	text-shadow: 0px 0px 2px #999;
+	-webkit-transition: text-shadow .25s;
+	transition: text-shadow .25s;
+}
+
+.bt-settings-trigger:hover a {
+	border-bottom: 1px solid transparent;
+	text-shadow: 0px 0px 4px #999;
+	border-bottom: 0px;
+	-webkit-transition: text-shadow .25s;
+	transition: text-shadow .25s;
+}
+
+.settings-menu {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 0px;
+	height: 100%;
+	background-color: #444;
+}
+
+.settings-content {
+	width: 100%;
+	padding: 60px 10px;
+	height: 100%;
+	position: relative;
+	display: none;
+}
+
 #topBar {
 	display: none;
 }
@@ -371,12 +417,6 @@ a:hover {
 	transition: color .25s, border .25s;
 }
 
-a.bt-menu-trigger:hover {
-	border-bottom: 1px solid rgba(255, 255, 255, .4);
-	-webkit-transition: border .25s;
-	transition: border .25s;
-}
-
 a.light {
 	color: #f5f5f5;
 	border-bottom: 1px solid transparent;
@@ -695,26 +735,4 @@ div.collection:hover {
 .postContent h1,
 .postContent h2 {
 	border-bottom: 1px solid #ccc;
-}
-
-.settingsTrigger {
-	font-family: 'Lora', 'Book Antiqua', Palatino, serif;
-	position: fixed;
-	right: 0px;
-	top: 0px;
-	z-index: 5;
-	color: #f5f5f5;
-	font-weight: bolder;
-	font-size: 2em;
-	margin: 15px;
-	text-shadow: 0px 0px 2px #999;
-	cursor: pointer;
-	-webkit-transition: text-shadow .5s;
-	transition: text-shadow .5s;
-}
-
-.settingsTrigger:hover {
-	text-shadow: 0px 0px 2px #000;
-	-webkit-transition: text-shadow .5s;
-	transition: text-shadow .5s;
 }
