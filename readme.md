@@ -25,7 +25,7 @@ php artisan migrate
 ###Twitter API
 You need to setup your CONSUMER_KEY and CONSUMER_SECRET inside app/config/packages/philo/twitter/config.php.
 
-```bash
+```php
 <?php
 
 return array(
