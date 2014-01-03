@@ -31,8 +31,8 @@
 		</div>
 		<p>Brazilian grown at Piracicaba - São Paulo, studies Computer Engineering at University of São Paulo. A newcomer to entrepreneurship world, he won several <em>Hackathons</em> and general computing marathons.</p>
 		<h1>About Molog</h1>
-		<p>Molog was made focused on simplicity and readability. We were inspired by <a href="http://medium.com/">Medium</a> blog system. Almost everything of simplicity were inspired on them and, looking on the reader satisfaction, we implemented a <em>reading setting</em> for each user.</p>
-		<p>Molog is <b>open source</b> (under MIT license) and can be found at <a href="#">github</a>.</p>
+		<p>Molog was made focused on simplicity and readability. We were inspired by <a target="_blank" href="http://medium.com/">Medium</a> blog system. Almost everything of simplicity were inspired on them and, looking on the reader satisfaction, we implemented a <em>reading setting</em> for each user.</p>
+		<p>Molog is <b>open source</b> (under MIT license) and can be found at <a target="_blank" href="https://github.com/giordanoapps/Molog">github</a>.</p>
 	</article>
 </section>
 <footer class="contact">
