@@ -23,18 +23,16 @@ Template.prototype = {
 			if($(this).hasClass('active'))
 			{
 				$(this).toggleClass('active');
-				$('body').stop().animate({'left':'0px'});
+				$('body').toggleClass('lefted');
 				$('.settings-content').hide();
-				$('.settings-menu').stop().animate({'width':'0px'});
+				$('.settings-menu').toggleClass('lefted');
 			}
 			else
 			{
 				$(this).toggleClass('active');
-				$('body').stop().animate({'left':'-250px'});
-				$('.settings-menu').stop().animate({'width':'250px'}, function()
-				{
-					$('.settings-content').fadeIn(500);
-				});
+				$('body').toggleClass('lefted');
+				$('.settings-menu').toggleClass('lefted');
+				$('.settings-content').fadeIn(500);
 			}
 		});
 	},

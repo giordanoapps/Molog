@@ -5,6 +5,27 @@ html, body {
 	margin: 0;
 	background-color: #fafafa;
 	color: #222;
+	left: 0px;
+	-webkit-transition: left .25s ease;
+	transition: left .25s ease;
+}
+
+body.lefted {
+	left: -250px;
+	-webkit-transition: left .25s ease;
+	transition: left .25s ease;
+}
+
+.settings-menu {
+	width: 0px;
+	-webkit-transition: width .25s ease;
+	transition: width .25s ease;
+}
+
+.settings-menu.lefted {
+	width: 250px;
+	-webkit-transition: width .25s ease;
+	transition: width .25s ease;
 }
 
 .bt-settings-trigger {

@@ -9,6 +9,10 @@
 		<link rel="stylesheet" href="{{ asset('css/menu.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/molog.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/molog-responsive.css') }}"/>
+		<link id="page_favicon" href="{{ asset('favicon.ico') }}" rel="icon" type="image/x-icon"/>
+		<meta name="description" content="molog.us is a simple reader focused blog.">
+		<meta name="keywords" content="blog, moments blog, molog, entrepreneurship, flat, simple">
+		<meta name="robots" content="index,follow">
 		@if($user != null)
 			@if($user->logged)
 				<script>
