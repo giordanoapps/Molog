@@ -15,6 +15,7 @@
 		<meta name="robots" content="index,follow">
 		@if($user != null)
 			@if($user->logged)
+				@if($user->settings != null)
 				<script>
 				var settings = {
 					font_size : {{ $user->settings->font_size }},
@@ -24,7 +25,6 @@
 					color : {{ $user->settings->font_color }}
 				}
 				</script>
-				@if($user->settings != null)
 				<style>
 				.postContent p {
 					font-size: {{ $user->settings->font_size }}em;
@@ -63,6 +63,16 @@
 					color: rgba(0,0,0,{{ $user->settings->font_color }});
 				}
 				</style>
+				@else
+				<script>
+				var settings = {
+					font_size : 1,
+					font_face : 'Lora',
+					font_weight : '300',
+					text_align : 'justify',
+					color : 'rgba(0,0,0,.8)'
+				}
+				</script>
 				@endif
 			@else
 			<script>
