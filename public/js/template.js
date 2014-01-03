@@ -23,14 +23,14 @@ Template.prototype = {
 			if($(this).hasClass('active'))
 			{
 				$(this).toggleClass('active');
-				$('body').toggleClass('lefted');
+				//$('body').toggleClass('lefted');
 				$('.settings-content').hide();
 				$('.settings-menu').toggleClass('lefted');
 			}
 			else
 			{
 				$(this).toggleClass('active');
-				$('body').toggleClass('lefted');
+				//$('body').toggleClass('lefted');
 				$('.settings-menu').toggleClass('lefted');
 				$('.settings-content').fadeIn(500);
 			}

@@ -64,6 +64,7 @@ body.lefted {
 	width: 0px;
 	height: 100%;
 	background-color: #444;
+	z-index: 2;
 }
 
 .settings-content {
@@ -756,4 +757,17 @@ div.collection:hover {
 .postContent h1,
 .postContent h2 {
 	border-bottom: 1px solid #ccc;
+}
+
+.settings-content .input label {
+	color: #fff;
+}
+
+.settings-content .input select {
+	width: 100%;
+	font-size: 1em;
+}
+
+.settings-content .slider {
+	width: 215px;
 }
