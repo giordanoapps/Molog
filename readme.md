@@ -34,6 +34,9 @@ return array(
 );
 ```
 
+###Google plus API
+Still unimplemented. We encourage you to do so. Just send a pull request :)
+
 #Contact
 You can reach me at github, twitter (@mauriciogior) and facebook (/mauriciogior).
 
