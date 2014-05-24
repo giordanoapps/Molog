@@ -61,10 +61,10 @@ class AuthController extends BaseController {
 			$user->username = $twitter->screen_name;
 
 			$twitter_data = Twitter::usersShow($twitter->user_id, $twitter->screen_name);
-			$picture = explode('_normal',$twitter_data->profile_image_url);
+			$picture = explode('_normal',$twitter_data["profile_image_url"]);
 
 			$user->picture = $picture[0].$picture[1];
-			$user->name = $twitter_data->name;
+			$user->name = $twitter_data["name"];
 
 			$user->save();
 		}
